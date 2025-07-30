@@ -1,0 +1,296 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.highlight {
+  background: transparent;
+  transition: all 0.5s ease 0s;
+}
+
+.highlight:hover {
+  background: rgba(255, 165, 0, 0.5);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.navbar {
+  background-color: transparent;
+  padding: 20px 0 20px 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  transition: background-color 0.3s ease; /* Smooth transition for background change */
+  background-color: transparent; /* Initially transparent */
+
+}
+
+#navbar.scrolled {
+    background-color: black; /* Slightly transparent black */
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.logo img {
+  width: 130px;
+  margin-left: 4vw;
+}
+
+.menu i {
+  color: white;
+  font-size: 25px;
+  margin-right: 4vw;
+}
+
+.sidebar {
+  background: white;
+  position: fixed;
+  height: 100%;
+  width: 25vw;
+  right: 0;
+  z-index: 100;
+  animation-name: nav;
+  animation-duration: 1s;
+  box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  
+}
+
+.sidebar .items {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.sidebar .items .item, .back {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 20px;
+  transition: background 1s ease 0s;
+   cursor: pointer;
+}
+
+.sidebar .items .item:hover {
+  background: rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  
+}
+
+.dropdownItems {
+  animation-name: dropdown;
+  animation-duration: 1s;
+  
+}
+
+.dropdownItems a {
+  padding: 8px 0 8px 35px;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: background 1s ease 0s;
+}
+
+.dropdownItems a:hover {
+  background: rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
+
+.hide {
+  display: none;
+}
+
+.footerSection {
+  background-image: url('/Media/hero-bg.png');
+  animation-name: footer;
+  animation-duration: 1s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.footerContent {
+  display: flex;
+  padding: 15vh 5vw 15vh 5vw;
+
+}
+
+.footerContent a, 
+.footerContent .item {
+  color: white;
+}
+
+.footerContent .Branding {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10vw;
+}
+
+.footerContent .Branding img {
+  width: 20vw;
+}
+
+.footerContent .Branding p {
+  color: white;
+  text-align: center;
+}
+
+.Branding, 
+.Socials, 
+.Contact, 
+.navigation {
+  margin: 0 1vw 0 1vw;
+  width: 50vw;
+  
+}
+
+.footerSection .title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.footerContent .Socials a, 
+.footerContent .navigation a, 
+.footerContent .Contact .item {
+  display: block;
+  text-decoration: none;
+  margin: 7px 0 7px 0;
+  transition: transform 0.5s ease 0s;
+
+}
+
+.footerContent .Socials a:hover, 
+.footerContent .navigation a:hover, 
+.footerContent .Contact .item:hover {
+  transform: translateX(5px);
+  font-weight: 550;
+}
+.copyright {
+  padding: 3vh 0 3vh 0;
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.footerSection .footerContent:nth-child(1) {
+  animation-name: textSlide;
+  animation-duration: 1s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  
+}
+
+footerSection .footerContent:nth-child(2) {
+  animation-name: textSlide;
+  animation-duration: 2s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  
+}
+
+footerSection .footerContent:nth-child(3) {
+  animation-name: textSlide;
+  animation-duration: 3s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  
+}
+
+footerSection .footerContent:nth-child(4) {
+  animation-name: textSlide;
+  animation-duration: 4s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  
+}
+
+
+@keyframes textSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+
+@keyframes nav {
+  from {
+    opacity: 0;
+    transform: translateX(10vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+ @media (max-width: 800px) {
+   
+   .sidebar {
+     width: 70vw;
+}
+   .footerContent {
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+   
+   .footerContent .Branding {
+     width: 60vw;
+     margin: 0 0 8vh 0;
+   }
+   
+   .footerContent .Branding img {
+     width: 60vw;
+   }
+   
+   .footerContent .Socials a, .footerContent .navigation a, .footerContent .Contact .item {
+     text-align: center;
+     
+   }
+   
+   .footerSection .title {
+     text-align: center;
+   }
+   
+   .Branding, .Socials, .Contact, .navigation  {
+     margin: 3vh 0 3vh 0;
+   }
+   
+   .copyright {
+     padding: 4vh 5vw 4vh 5vw;
+   }
+ }

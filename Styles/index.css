@@ -1,0 +1,605 @@
+.titleContainer {
+  margin-bottom: 15px;
+}
+
+.HeroSection {
+  background-image: url('/Media/hero-bg.png');
+  background-size: cover;
+  height: 100dvh;
+}
+
+.MainHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 9vh;
+  height: 91dvh;
+}
+
+.HeroContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vdh;
+}
+
+.HeroContent .text {
+  padding: 0 0 0 30px;
+}
+
+.HeroContent .text .title {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  animation-name: heroText;
+  animation-duration: 1s;
+  
+  
+}
+
+.HeroContent .text .description {
+  font-size: 1.2rem;
+  color: white;
+  animation-name: heroText;
+  animation-duration: 1.5s;
+  
+}
+
+.HeroSection .text button {
+  color: black;
+  background-color: white;
+  border: none;
+  width: 120px;
+  height: 45px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  animation-name: heroText;
+  animation-duration: 2s;
+  transition: all 1s ease 0s;
+  
+}
+
+.isaacNewtonSection .text .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  animation-name: textfade;
+  animation-duration: 3s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+  margin-bottom: 18px;
+  
+}
+
+.lineText {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+  
+}
+
+.lineText::after{
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom right, orange, orangered);
+  border-radius: 20px;
+  height: 5px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  animation-name: titleLine;
+  animation-duration: 1s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  
+}
+
+.HeroSection .text button:hover {
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  
+}
+
+.HeroImage img{
+  width: 45vw;
+  animation-name: rocket;
+  animation-duration: 2s;
+  transition: all 1s ease 0s;
+  
+  
+}
+
+.MainHero img:hover {
+  transform: scale(0.95);
+}
+
+.funFactSection {
+  margin: 6vh 8vw 6vh 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.funFactContent {
+  border: 3px solid transparent;
+  border-image: linear-gradient(to right, orange, orangered) 1;
+  padding: 3vw 2vw 3vw 2vw;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  animation-name: popIn;
+  animation-duration: 1s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+  width: 80vw;
+  
+}
+
+.funFactSection .title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  
+}
+
+.funFactSection .description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  
+  
+}
+
+.isaacNewtonSection {
+  display: flex;
+  padding: 5vh 8vw 5vh 8vw;
+  justify-content: center;
+}
+
+.isaacNewtonSection img {
+  width: 25vw;
+  animation-name: IsaacNewton;
+  animation-duration: 1s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.isaacNewtonSection .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60vw;
+}
+
+.isaacNewtonSection .text .description {
+  font-size: 1.1rem;
+  text-align: justify;
+  animation-name: textSlide;
+  animation-duration: 5s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 70%;
+  line-height: 1.6;
+}
+
+.lawsOfMotionSection {
+  padding: 5vh 8vw 5vh 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lawsOfMotionMain {
+}
+
+.lawsOfMotionSection .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 8px;
+  animation-name: textfade;
+  animation-duration: 1s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+  
+}
+
+.lawsOfMotionContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  
+  
+}
+
+.lawsOfMotionContent .item {
+  background-size: cover;
+  background-attachment: fixed; 
+  background-position: center 30%;
+  width: 28vw;
+  height: 28vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation-name: lawsOfMotionPopIn;
+  animation-duration: 2s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.lawsOfMotionContent .item:nth-child(1) img {
+  width: 155px;
+}
+
+.lawsOfMotionContent .item:nth-child(3) img {
+  width: 320px;
+}
+
+.lawsOfMotionContent .item.item:nth-child(2) {
+  margin: 0 1vw 0 1vw;
+}
+
+.lawsOfMotionContent .item img {
+  width: 250px;
+}
+
+.lawsOfMotionContent .item p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 20px 0 20px 0;
+}
+
+.lawsOfMotionContent .item button {
+  width: 220px;
+  height: 45px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  transition: all 1s ease 0s;
+  cursor: pointer;
+  
+}
+
+.lawsOfMotionContent .item button:hover {
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  
+}
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12vh 0 12vh 0;
+}
+
+.AboutTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.aboutSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  padding: 10vh 8vw 5vh 8vw;
+}
+
+.aboutSection img {
+  width: 12vw;
+  animation-name: popIn;
+  animation-duration: 1s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.aboutSection .text {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.aboutSection .text .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  animation-name: textfade;
+  animation-duration: 2s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.aboutSection .text .description {
+  font-size: 1.1rem;
+  text-align: justify;
+  animation-name: textSlide;
+  animation-duration: 3s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+  line-height: 1.6;
+}
+
+.teamSection {
+  padding: 8vh 8vw 15vh 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.teamMain {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.teamSection .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+  animation-name: textfade;
+  animation-duration: 2s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+
+.teamContent {
+  display: flex;
+  padding: 5vh 0;
+  justify-content: center;
+  
+}
+
+.teamContent .item {
+  width: 25vw;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 2vw 0 2vw;
+  animation-name: popIn;
+  animation-duration: 0.5s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  transition: 0.5s all ease 0s;
+}
+
+.teamSection .item:hover {
+  transform: scale(0.95);
+}
+
+.teamContent .item:nth-child(1) {
+  
+}
+
+
+.teamContent .item img {
+  width: 25vw;
+  border-radius: 20px 20px 0 0;
+  
+}
+
+.teamContent .item .memberDetail {
+  background: white;
+  height: 15vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 0 20px 20px;
+  
+  
+}
+
+.teamContent .item .memberDetail .name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  
+}
+
+.teamContent .item .memberDetail .role {
+  font-size: 0.8rem;
+  
+}
+
+@keyframes titleLine {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes IsaacNewton {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes lawsOfMotionPopIn {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes textSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+}
+@keyframes heroText {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+}
+
+@keyframes textfade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  
+}
+
+
+
+@keyframes rocket {
+  from {
+    transform: translateX(30vw) translateY(10vh);
+  }
+  to{
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .funFactSection {
+    margin-top: 1vh;
+  }
+  
+  .aboutSection {
+    flex-direction: column-reverse;
+  }
+  
+  .aboutSection img {
+    width: 50vw;
+    margin: 30px 0 10px 0;
+  }
+  
+  .isaacNewtonSection .text {
+    width: 85vw;
+  }
+  
+  .aboutSection .text {
+    width: 85vw;
+    margin-left: 0;
+    
+  }
+  
+  .lawsOfMotionContent {
+    flex-direction: column;
+  }
+  
+
+  
+  .lawsOfMotionContent .item {
+    width: 85vw;
+    height: 85vw;
+    margin: 5vh 0 5vh 0;
+    background-attachment: scroll;
+  }
+  
+  .MainHero {
+    padding-top: 10vh;
+    
+  }
+  
+  .HeroContent {
+    flex-direction: column;
+    justify-content: center;
+    padding: 4vh 0 4vh 0;
+    
+  }
+  
+  .HeroContent .text {
+    padding: 0 4vw 0 4vw;
+    text-align: center;
+  }
+  
+  .HeroContent .text .title {
+    font-size: 3rem;
+  }
+  
+  .HeroContent .text .description {
+    font-size: 0.9rem;
+  }
+  
+  .HeroImage img {
+    width: 65vw;
+  }
+  
+  .isaacNewtonSection {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  
+  .isaacNewtonSection img {
+    width: 87vw;
+    margin-top: 5vh;
+  }
+  
+  .teamContent {
+    flex-direction: column;
+  }
+  
+  .teamContent .item {
+    margin: 3vh 2vw 3vh 2vw;
+  }
+  
+  .teamContent .item img, 
+  .teamContent .item {
+    width: 80vw;
+  }
+  
+ .teamSection .description {
+   padding: 0 3vw 0 3vw;
+   text-align: justify;
+ }
+ .teamSection .title {
+   text-align: left;
+   padding-left: 3vw;
+ }
+}

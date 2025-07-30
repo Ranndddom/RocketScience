@@ -1,0 +1,385 @@
+.nextBack {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  padding: 5vh 0 10vh 0;
+  
+   
+}
+
+.nextBack button {
+  border: none;
+  background: linear-gradient(to bottom right, orange, orangered);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  width: 90px;
+  height: 40px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s all ease 0s;
+}
+
+.nextBack button:hover {
+  opacity: 0.8;
+}
+
+.nextBack .Next {
+  margin-right: 50px;
+  
+}
+
+.nextBack .Back {
+  margin-left: 50px;
+  
+}
+
+.nextBack .Next .right-arrow {
+  margin-left: 5px;
+}
+
+.nextBack .Back .left-arrow {
+  margin-right: 5px;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.heroSection {
+  background: url('/Media/accelerationHero.gif');
+  background-size: cover;
+  background-position: center 90%;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.HeroContent {
+  width: 55vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5vh 5vw;
+  animation-name: textfade;
+  animation-duration: 1s;
+  
+}
+
+.heroSection .HeroContent .title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  animation-name: textfade;
+  animation-duration: 2s;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.heroSection .HeroContent .title::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom right, orange, orangered);
+  border-radius: 20px;
+  height: 5px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  animation-name: titleLine;
+  animation-duration: 2s;
+}
+
+.lineText {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+  
+}
+
+.lineText::after{
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom right, orange, orangered);
+  border-radius: 20px;
+  height: 5px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  animation-name: titleLine;
+  animation-duration: 2s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.heroSection .HeroContent .description {
+  margin-block: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+  animation-name: heroTextSlide;
+  animation-duration: 2.5s;
+  
+}
+
+.heroSection .HeroContent button {
+  color: black;
+  background-color: white;
+  border: none;
+  width: 120px;
+  height: 45px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  animation-name: heroTextSlide;
+  animation-duration: 3s;
+  transition: all 1s ease 0s;
+  margin-block: 10px;
+  
+}
+
+.heroSection .HeroContent button:hover {
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  
+}
+
+.mainContent {
+  padding: 8vh 12vw 1vh 12vw;
+}
+
+.body {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.mainContent .title {
+  margin: 40px 0 30px 0;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to bottom right, orange, orangered);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-composite: text;
+  animation-name: textfade;
+  animation-duration: 2s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.heading {
+  margin: 40px 0 30px 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to bottom right, orange, orangered);
+  color: transparent;
+  background-clip: text;
+-webkit-background-composite: text;
+  
+}
+
+.subheading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: orangered;
+  margin: 40px 0 10px 0;
+}
+
+p {
+  animation-name: textfade;
+  animation-duration: 2s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.Activity {
+  margin: 0 0 7vh 0;
+  padding: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  animation-name: textSlide;
+  animation-duration: 2s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.Suggested {
+  margin: 12vh 0 5vh 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to bottom right, orange, orangered);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-composite: text;
+  animation-name: textfade;
+  animation-duration: 2s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.activityTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  color: orangered;
+  
+  
+}
+
+.activitySubHeading {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: orangered;
+  margin-top: 18px;
+}
+
+.Assessment {
+  margin: 0 0 10vh 0;
+  padding: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  animation-name: popIn;
+  animation-duration: 2s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  
+}
+
+.assessmenttitle {
+  margin: 0 0 15px 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to bottom right, orange, orangered);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-composite: text;
+  
+}
+
+.question {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.choice {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  padding: 2px 0 2px 3px;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background-color: #f8f8f8;
+  color: orangered;
+}
+
+.ExampleAnswer {
+  background: linear-gradient(to bottom right, orange, orangered);
+  border: none;
+  width: 130px;
+  height: 40px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  
+  
+}
+
+.answer {
+  font-weight: bold;
+  color: orangered;
+  font-size: 1.1rem;
+  
+}
+  
+@keyframes titleLine {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes heroTextSlide {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(0);
+  }
+  
+}
+
+@keyframes textSlide {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+}
+@keyframes heroText {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+}
+
+@keyframes textfade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 8vh 5vw 8vh 5vw;
+}
+
+  .HeroContent {
+    width: 80vw;
+    
+  }
+  
+  .heroSection .HeroContent .title {
+  font-size: 2rem;
+  }
+  
+}
+
+
+
