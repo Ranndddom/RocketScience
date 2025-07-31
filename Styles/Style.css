@@ -178,7 +178,6 @@ html {
 .footerContent .Socials a:hover, 
 .footerContent .navigation a:hover, 
 .footerContent .Contact .item:hover {
-  transform: translateX(5px);
   font-weight: 550;
 }
 .copyright {
@@ -293,4 +292,5 @@ footerSection .footerContent:nth-child(4) {
    .copyright {
      padding: 4vh 5vw 4vh 5vw;
    }
+   
  }
